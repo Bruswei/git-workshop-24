@@ -1,4 +1,7 @@
-# Setup Your Environment
+---
+layout: default
+title: Setup Your Enviroment
+---
 
 While our focus will be on building Git functionality from the ground up, we will utilize commands like `git log --oneline --graph` to inspect and understand the modifications within our Git repository.
 

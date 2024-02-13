@@ -1,4 +1,8 @@
-## SHA-1 Hashing Across Different Operating Systems
+---
+layout: default
+title: SHA-1 Hashing Across Different Operating Systems
+---
+
 
 SHA-1 is a cryptographic hash function used by Git to uniquely identify objects within the repository. Here are the methods to perform SHA-1 hashing manually on different operating systems:
 
