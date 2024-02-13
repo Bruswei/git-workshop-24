@@ -2,3 +2,31 @@
 ---
 
 @import "jekyll-theme-midnight";
+
+#header nav ul {
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+  }
+  
+  #header nav ul li.fork {
+    flex: 1;
+    text-align: left;
+  }
+  
+  #header nav ul li.nav-btn {
+    flex: 1;
+    text-align: right;
+  }
+  
+  /* Add any additional styling you need for the links here */
+  #header nav ul li a {
+    display: inline-block;
+    /* other styles like padding, margin, color, etc. */
+  }
+
+  #header nav {
+    background-color: #353535; /* This will remove any background color */
+  }

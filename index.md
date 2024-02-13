@@ -1,5 +1,6 @@
 ---
 layout: default
+title: Git workshop Booster 2024
 ---
 
 ## About this Workshop
