@@ -18,11 +18,14 @@ We are going to make a barebone git repository completely manually from scratch 
 - **Hands-on Practice**: Each section includes practical tasks to apply what you've learned.
 - **Self-Guided Learning**: The workshop is designed for self-guided learning with comprehensive instructions.
 
-## Let's Get Started!
+## Let's Get Ready!
 We are excited to have you here and can't wait to explore the intricacies of Git with you.
 
-For this workshop you are going to need to have a git installed and a SHA-1 hashing ready. If you have each both allready setup, please skip right to the first task!
+For this workshop you are going to need to have a git installed and a compression library (either Python or Zlib directly). If you have each both allready setup, please skip right to the first task!
 
 [Setup Your Git enviroment](pages/git-setup.md) 
 
-[Setup Your SHA-1](pages/hashing-setup.md) 
+<!-- [Setup Your SHA-1](pages/hashing-setup.md)  -->
+
+## Let's Get Started!
+When your setup is verified and ready, lets go to the first section:[ .git and first commit.](pages/blob-commit.md) 
