@@ -31,10 +31,11 @@ mkdir -p $objects_dir
 object_file="${objects_dir}/${hash:2}"
 ```
 
-Move the Compressed Object: Move or rename the compressed_object to the path you just created.
+Move the Compressed Object: Move or rename the compressed_object to the path you just created and clean up.
 
 ```
 mv compressed_object $object_file
+rm temp_object
 ```
 
 Congratulations, you have now created your first blob object manually.
