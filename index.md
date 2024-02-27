@@ -28,4 +28,4 @@ For this workshop you are going to need to have a git installed and a compressio
 <!-- [Setup Your SHA-1](pages/hashing-setup.md)  -->
 
 ## Let's Get Started!
-When your setup is verified and ready, lets go to the first section:[ .git and first commit.](pages/blob-commit.md) 
+When your setup is verified and ready, lets go to the first section:[ .git.](pages/1-git-folder.md) 
