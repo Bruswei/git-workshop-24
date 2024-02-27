@@ -71,3 +71,8 @@ After we have created blob and tree object, it is time to create a commit object
 [Here is a detailed steps on how to do it](create-commit-object.md)
 
 By the end of these steps, you will have manually created the initial commit for your repository.
+
+<footer style="width: 100%; display: flex; justify-content: space-between; padding: 20px 0;">
+    <a href="" style="float: left; margin-left: 10px;">Previous Step: .git folder</a>
+    <a href="./2-blob-commit.html" style="float: right; margin-right: 10px;">Next Step: </a>
+</footer>

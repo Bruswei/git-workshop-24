@@ -59,5 +59,5 @@ Now git status thinks that we are on branch `main` and we kinda achive what we a
 
 <footer style="width: 100%; display: flex; justify-content: space-between; padding: 20px 0;">
     <a href="" style="float: left; margin-left: 10px;">Previous Step</a>
-    <a href="./2-blob-commit.html" style="float: right; margin-right: 10px;">Next Step</a>
+    <a href="./2-blob.html" style="float: right; margin-right: 10px;">Next Step</a>
 </footer>
