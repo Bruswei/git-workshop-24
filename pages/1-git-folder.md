@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Create first commit
+title: Create .git
 ---
 
 Welcome to our workshop's journey into Git's inner workings! Normally, when we start versioning changes in our projects, we rely on commands like `git add` and `git commit` to track our modifications. However, to truly grasp the magic behind how Git saves and manages these changes, we're going to dive deeper and take a hands-on approach, doing it all manually, without relying on those commands. 
@@ -58,6 +58,6 @@ Now git status thinks that we are on branch `main` and we kinda achive what we a
 
 
 <footer style="width: 100%; display: flex; justify-content: space-between; padding: 20px 0;">
-    <a href="" style="float: left; margin-left: 10px;">Previous Step: Setup</a>
+    <a href="../index.html" style="float: left; margin-left: 10px;">Previous Step: Setup</a>
     <a href="./2-blob.html" style="float: right; margin-right: 10px;">Next Step: Make a blob</a>
 </footer>
