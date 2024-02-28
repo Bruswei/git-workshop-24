@@ -50,7 +50,7 @@ Not quite yet, because when we are running `git status`, git is trying to figuri
 So lets make a `HEAD` and verify:
 
 ```
-ref: refs/heads/main > .git/HEAD
+echo ref: refs/heads/main > .git/HEAD
 git status
 ```
 
@@ -58,6 +58,6 @@ Now git status thinks that we are on branch `main` and we kinda achive what we a
 
 
 <footer style="width: 100%; display: flex; justify-content: space-between; padding: 20px 0;">
-    <a href="" style="float: left; margin-left: 10px;">Previous Step</a>
-    <a href="./2-blob.html" style="float: right; margin-right: 10px;">Next Step</a>
+    <a href="" style="float: left; margin-left: 10px;">Previous Step: Setup</a>
+    <a href="./2-blob.html" style="float: right; margin-right: 10px;">Next Step: Make a blob</a>
 </footer>
