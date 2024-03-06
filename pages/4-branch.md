@@ -36,7 +36,7 @@ Now `git status` is happy and this is what my `.git` folder looks like:
 
 ## Git log 
 
-Lets take a look at command `git log` in our terminal:
+Lets take a look at command `git log` in our terminal: (remember it should show something else in your teminal)
 
 ```
 commit 79e1fd1b22c75a812e59672d973cae307c036ef3 (HEAD -> main)
@@ -57,3 +57,16 @@ When you are ready, you can verify with command `git branch` & `git log`, it sho
 
 ## Checking out the branch
 As you probly noticed, we are currently on `master` branch. Lets try to checkout the new `dev` branch we just made and verify with command `git branch` or `git log`.
+
+## Deleting a branch
+So, we've just learned how to create branches from the scratch. Ever wonder what goes down when you decide to delete one branch with a `git branch -d` command?
+
+Since git branches are simply just lightweighted pointers to a commit object, when we deleting a branch, the reference under `.git/refs/heads` are deleted but the commit object are still there! Until they are cleaned up by garbage collection mechanism, since they are not accessible through other branches. 
+
+## Question
+Now lets try to think what actually happens now when we are trying to reset a branch to another? Like `git reset main`? 
+
+<footer style="width: 100%; display: flex; justify-content: space-between; padding: 20px 0;">
+    <a href="./3-tree-commit.html" style="float: left; margin-left: 10px;">Previous Step: Create a commit</a>
+    <a href="./3-tree-commit.html" style="float: right; margin-right: 10px;">Next Step: </a>
+</footer>
