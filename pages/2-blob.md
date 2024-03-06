@@ -21,7 +21,7 @@ Save and close the file.
 
 A blob object in Git represents the contents of a file, and this is typically achive by `git add README.md`. To create a blob object, you will generate a hash based on the contents of your `README.md` file. 
 
-Before we begin, lets take a look at the .git structure we have currently:
+Before we begin, lets take a look at the .git structure we have currently: (You can achive this with `tree .git` command)
 
 ```
 .git
@@ -37,7 +37,7 @@ Do the following in terminal:
 git hash-object README.md -w
 ```
 
-Command `hash-object` is another plumbing command and it hashes an object for us, and with `-w` flag we are asking git to store it for us in `.git` folder. Lets see what happens with the `.git` now:
+Command `hash-object` is another plumbing command and it hashes an object for us, and with `-w` flag we are asking git to store it for us in `.git` folder. Lets see what happens with the `.git` now: (You can achive this with `tree .git` command)
 
 ```
 .git

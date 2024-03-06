@@ -21,11 +21,19 @@ We are going to make a barebone git repository completely manually from scratch 
 ## Let's Get Ready!
 We are excited to have you here and can't wait to explore the intricacies of Git with you.
 
-For this workshop you are going to need to have a git installed and a compression library (either Python or Zlib directly). If you have each both allready setup, please skip right to the first task!
+For this workshop you are going to need to have a git installed! I will recommend everyone to use terminal (OSX/unix) or Git Bash (windows).
 
 [Setup Your Git enviroment](pages/git-setup.md) 
+
+It is recommended to have `tree` installed in terminal for Mac and Linux users. For Windows users please take a look at this to add `tree` to `git-bash`:
+
+[Windows: add tree to git bash](pages/windows-tree-git)
 
 <!-- [Setup Your SHA-1](pages/hashing-setup.md)  -->
 
 ## Let's Get Started!
-When your setup is verified and ready, lets go to the first section:[ .git.](pages/1-git-folder.md) 
+When your setup is verified and ready, lets go to the first section:[ Create .git.](pages/1-git-folder.md) 
+
+<footer style="width: 100%; display: flex; justify-content: space-between; padding: 20px 0;">
+    <a href="pages/1-git-folder.html" style="float: right; margin-right: 10px;">Next Step: Create .git</a>
+</footer>

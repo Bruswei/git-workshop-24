@@ -18,7 +18,7 @@ Lets make a git folder by using command `mkdir .git`, and it should now create a
 
 ### Lets verify our git repository
 
-Lets verify if this works as intended, run `git status`. 
+Lets check if this works as intended, run `git status`. 
 
 If you see `fatal: not a git repository (or any of the parent directories): .git`, don't worry. Lets see what's the problem here.
 
@@ -41,6 +41,7 @@ Let's make the folders and verify if it works now.
 
 ```
 mkdir .git/objects
+mkdir .git/refs
 mkdir .git/refs/heads
 git status
 ```
