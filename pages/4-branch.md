@@ -68,5 +68,5 @@ Now lets try to think what actually happens now when we are trying to reset a br
 
 <footer style="width: 100%; display: flex; justify-content: space-between; padding: 20px 0;">
     <a href="./3-tree-commit.html" style="float: left; margin-left: 10px;">Previous Step: Create a commit</a>
-    <a href="./3-tree-commit.html" style="float: right; margin-right: 10px;">Next Step: </a>
+    <a href="./5-new-commit.html" style="float: right; margin-right: 10px;">Next Step: Make another commit</a>
 </footer>
