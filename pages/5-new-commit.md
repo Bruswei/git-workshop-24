@@ -25,6 +25,6 @@ By adding a single "!" to README.md, git creates three new objects: a blob, a co
 Consider a scenario where another file remains unchanged while you modify only one file in the repository. How do you think the structure of your .git directory will adapt to this change? Will Git create new blobs and trees even if only a single file has been updated? 
 
 <footer style="width: 100%; display: flex; justify-content: space-between; padding: 20px 0;">
-    <a href="./4-branch.html" style="float: right; margin-right: 10px;">Back to: branching</a>
-    <a href="../index.html" style="float: left; margin-left: 10px;">Back to the start</a>
+    <a href="./4-branch.html" style="float: right; margin-right: 10px;">Back to: Branching</a>
+    <a href="./6-rebase.html" style="float: left; margin-left: 10px;">Next: Rebasing</a>
 </footer>
