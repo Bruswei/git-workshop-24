@@ -3,9 +3,9 @@ layout: default
 title: Merge And Rebase 
 ---
 
-Most of us have probly used `git rebase `on another branch before. Just in case here is a quick sum up what rebase is doing:
+Many of us are familiar with using git rebase with branches, but here's a brief recap of what rebase does:
 
-> Git rebase rewrites the commit history by transferring commits from one branch to another, creating a linear sequence. It's used for cleaner project history but requires caution on shared branches to avoid issues. This is another way of explaining:
+>Git rebase modifies the commit history to move commits from one branch to another, creating a straight-line sequence. This method is favored for achieving a cleaner project history but demands careful handling when dealing with branches shared with others. To illustrate:
 > ```
 > main:       1 --- 2 --- 3
 >                   \
@@ -16,32 +16,30 @@ Most of us have probly used `git rebase `on another branch before. Just in case 
 > main:       1 --- 2 --- 3 --- A --- B --- C
 > ```
 
-Let's delve into the internal mechanics of rebasing in Git. Initially, a Git branch is essentially a pointer to a specific commit, which in turn is linked to its ancestor commits, forming a chain that traces back to the initial commit in the repository. However, the scenario becomes more complex when we decide to rebase a feature branch onto an updated main branch.
+Let's explore how rebasing works behind the scenes in Git. A branch in Git points to a specific commit, which links back to its predecessor commits, creating a historical chain back to the initial commit. Rebasing a feature branch onto an updated main branch complicates this straightforward lineage.
 
+## Creating a new branch and commit
 
-## Make a new branch and a commit
+1. Create a new branch called "gitignore" that points to the main branch. Do this manually for practice, instead of using git checkout -b. 
 
-1. Let's make a new branch that is pointing to main and update HEAD, make it as an exercise do it manually instead of `git checkout -b `. For workshop purpose, name it "gitignore".
+2. Use touch .gitignore to create a new .gitignore file, leaving it empty.
 
-2. Now lets make a new file `.gitignore` with command `touch .gitignore` and leave it empty. 
-
-3. Make a new commit and make sure it is on the new `gitignore` branch! If you want you can do it manually as we did earlier. If not just commmit to the new branch you just made.
+3. Commit this new file to the gitignore branch, either manually or with the usual commit commands.
 
 Verify that you have commited two branches from main with `git log --oneline --graph`.
 
-
 ## Fast-forward merging
 
-Now lets merge our `main` branch so the new branch `gitignore` is behind and ready for rebasing.
+We'll now merge the main branch so that the gitignore branch falls behind, setting the stage for rebasing.
 
-This is how it looks now:
+Currently, the branch layout is:
 
 ```
     Main
    /    \
 Dev      Gitignore
 ```
-With a fast-forwarding merging the new graph should looks like:
+After a fast-forwarding merging the new graph should looks like:
 
 ```
   initial commit
@@ -49,17 +47,19 @@ With a fast-forwarding merging the new graph should looks like:
 Dev/Main     Gitignore
 ```
 
-Lets give a try and see if you can achive this outcome without assistance from what we have learned from earlier, if not you can click below to show the steps. 
+Try to achieve this based on what we've learned. If you need a reminder, you can expand the instructions below.
 <details>
   <summary>Click here to expand!</summary>
     <br>
-  Since what we are trying to achive here is just pointing main to the same commit object as dev, we can just easly copy the hash-id of `.git/refs/heads/dev` and paste it into `.git/refs/heads/main`.
+    To align `main` with `dev`, simply copy the commit hash from `.git/refs/heads/dev` and paste it into `.git/refs/heads/main`.
 </details>
   <br>
 
-## Lets do some Rebasing
+## Lets Rebase
 
 Now lets checkout how the git graph looks like, we can do it with command `git log --oneline --graph gitignore main`, this is how it looks like on my screen:
+
+Review the git graph for the `gitignore` and `main` branches with `git log --oneline --graph gitignore main`. It might look like this: 
 
 ```
 * 791517b (HEAD -> gitignore) Add gitignore
@@ -68,7 +68,19 @@ Now lets checkout how the git graph looks like, we can do it with command `git l
 * 79e1fd1 Initial commit
 ```
 
-Now we can see there are two different path from initial commit which indicates `gitignore` and `main` have diverged. This is where rebase comes in. Normally we can run `git rebase main` when checked out `gitignore` branch, but lets do this manually.
+This indicates gitignore and main have diverged. Here's where we typically use git rebase main from the gitignore branch. However, let's break down what happens internally during a rebase:
+
+> 1. Identifies base common commit: Git finds the common base commit between the two branches, which is `79e1fd1` from the graph above (or your initial commit).
+> 2. Replay changes: Git takes commit from the `gitignore` branch that are not in `main`(in this case `79e1fd1`) and replays them on top of `main`. Since `main`'s latest commit is `782a959`, Git attempts to apply the changes from `791517b` onto this commit. 
+> 3. Create new commit objects: Each commit applies to the new base creates a new commit object because the parent commit changes(from `79e1fd1` to `782a959`), even if the file content (blobs) doesn't change. This new commit object will have a new SHA-1 hash because its metadata (such as parent commit) changes.
+> 4. Update branch reference: Finnaly, the `gitignore` branch reference is updated to point to the newly created commit, effectively moving the branch on top of the `main`.
+
+To achive this we can use porcelain command `cherry-pick` which applies the changes from specific commits to the current branch as new commits. 
+
+1. Change your HEAD to reference main (or just a `git checkout main`)
+2. Make a temp branch either by copy in `.git/refs/heads/main` or just `git checkout -b temp`
+2. Run `git cherry-pick <your-gitignore-branch-id>`
+3. Update gitignore branch refernce to the same as temp branch.
 
 
-
+Now you can verify the correct sturecture in your git graph with `git log --oneline --graph`
