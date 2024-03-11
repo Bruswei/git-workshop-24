@@ -25,11 +25,7 @@ For this workshop you are going to need to have a git installed! I will recommen
 
 [Setup Your Git enviroment](pages/git-setup.md) 
 
-It is recommended to have `tree` installed in terminal for Mac and Linux users. For Windows users please take a look at this to add `tree` to `git-bash`:
-
-[Windows: add tree to git bash](pages/windows-tree-git)
-
-<!-- [Setup Your SHA-1](pages/hashing-setup.md)  -->
+For Mac and Linux users, installing the tree command in your terminal is recommended. Windows users can achieve a similar tree structure output by using the command cmd //C "tree .git /F /A" in git-bash. Make sure to have this command handy, as we'll need to display the tree structure later in the workshop.
 
 ## Let's Get Started!
 When your setup is verified and ready, lets go to the first section:[ Create .git.](pages/1-git-folder.md) 

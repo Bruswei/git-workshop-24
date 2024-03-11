@@ -41,8 +41,7 @@ Let's make the folders and verify if it works now.
 
 ```
 mkdir .git/objects
-mkdir .git/refs
-mkdir .git/refs/heads
+mkdir -p .git/refs/heads
 git status
 ```
 

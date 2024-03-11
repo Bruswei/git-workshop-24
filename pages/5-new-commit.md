@@ -16,7 +16,7 @@ Lets make the commit in the usual way and lets observe what git does here. Use `
 ### Understanding Git's handling of changes:
 
 1. Execute git log in your terminal to view the most recent commits. You'll notice a new commit titled "Update readme". Copy this commit's hash, then use git cat-file -p <yourHashId> to inspect the commit object. You'll see it contains fresh data and a link to its parent commit, which is the initial commit you created.
-2. Locate and copy the hash found within this commit object and inspect it using git cat-file -p <yourHashId>. This operation should reveal that README.md is associated with a new hash, different from the previous one.
+2. Locate and copy the hash (of tree object) found within this commit object and inspect it using git cat-file -p <yourHashId>. This operation should reveal that README.md is associated with a new hash, different from the previous one.
 3. Extract and inspect the hash from the tree object linked to this commit by running git cat-file -p <yourHashId>. You will find that it displays the content: This repository was made manually without git init!!, indicating the update made to README.md.
 
 ### Summary of Git's behavior:

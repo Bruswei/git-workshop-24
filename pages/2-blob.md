@@ -70,7 +70,7 @@ This repository was made manually without git init!
 
 As we mentioned earlier, we are making a blob manually in this workshop to replicate the step `git add README.md`, but lets see what happens when we run `git status` in the terminal.
 
-Why isn't `README.md` stagged like when we run `git add README.md`? The pocelain command `git add` hashs the objects, structure and also update the `index` of the git. Sometimes we refering it as `Staging`. So lets do that with plumbing command `git update-index`:
+Why isn't `README.md` stagged like when we run `git add README.md`? The pocelain command `git add` hashs the objects, structure and also update the `index` of the git. Sometimes we refering it as `Staging area`, which is an intermediate layer that holds information about what will go into your ext commit. So lets do that with plumbing command `git update-index`:
 
 ```
 git update-index --add --cacheinfo 100644 35d7a9a460c597c8a29b210b2bed894a5281088e README.md

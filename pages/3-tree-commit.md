@@ -29,6 +29,7 @@ Now our .git folder looks like following:
 ```
 
 A new object is now created under `.git/objects` and the hash was `86046e36f9b11251cf800033cec1c524502a6ce4`. We can verify with `git cat-file -t 86046e` and `git cat-file -p 86046e`.
+> Flag -t stands for type and -p stands for print.
 
 ## Create a Commit Object
 
@@ -75,7 +76,7 @@ This is what `.git` looks like now:
 
 You should have received a new object with a different hash than what shows above, this is because the content of the commit object is different, like autor and comitter.
 
-Lets verify the new object with `git cat-file -t` and `git cat-file -p`
+Lets verify the new object with `git cat-file -t <hash-of-your-new-commit-object>` and `git cat-file -p <hash-of-your-new-commit-object>`
 
 
 
