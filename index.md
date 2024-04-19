@@ -1,17 +1,18 @@
 ---
 layout: default
-title: Git workshop Booster 2024
+title: Git Internal Workshop
 ---
 
 ## About this Workshop
 Welcome to our hands-on workshop on Git Internals! This workshop is designed to give you a deep dive into the workings of the `.git` folder, helping you understand the core concepts of Git, including blobs, trees, commits, and branches. Whether you're new to Git or an experienced user, this workshop will provide valuable insights into the mechanisms that power Git.
 
 ## The Goal of this workshop
-We are going to make a barebone git repository completely manually from scratch without using any typical `git init`. Doing this will provide us deeper understanding of how git actually works.
+We are going to create a barebone git repository completely manually from scratch without using any typical `git init`. Doing this will provide us deeper understanding of how git actually works.
 
 ### Navigation
-- Use the sidebar/menu to navigate between different sections of the workshop.
+- Use the navigation buttons to navigate between different sections of the workshop.
 - Sections are organized in the order they should be completed.
+- Recommend to name files and content exact as suggested in the page for best result.
 
 ### Working Through the Workshop
 - **At Your Own Pace**: The content is structured to allow you to work at a pace that's comfortable for you.
