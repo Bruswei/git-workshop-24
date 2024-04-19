@@ -83,4 +83,9 @@ To achive this we can use porcelain command `cherry-pick` which applies the chan
 3. Update gitignore branch refernce to the same as temp branch.
 
 
-Now you can verify the correct sturecture in your git graph with `git log --oneline --graph`
+Now you can verify the correct sturecture in your git graph with `git log --oneline --graph`.
+
+
+<footer style="width: 100%; display: flex; justify-content: space-between; padding: 20px 0;">
+    <a href="../index.html" style="float: left; margin-left: 10px;">Return to first page</a>
+</footer>
