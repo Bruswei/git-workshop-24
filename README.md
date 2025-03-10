@@ -1,5 +1,6 @@
 # GIT internal workshop 2024
 This is a github repository for git internal workshop. 
+Start here: https://bruswei.github.io/git-workshop-24/
 
 Last workshop: Booster 2024. 
 
